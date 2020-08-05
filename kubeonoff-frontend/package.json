@@ -1,0 +1,28 @@
+{
+  "name": "kubeonoff-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "fuse.js": "^3.2.0",
+    "lodash": "^4.17.4",
+    "query-string": "^5.0.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-markdown": "^2.5.0",
+    "react-scripts": "1.0.14"
+  },
+  "homepage": ".",
+  "proxy": "http://onoff.local/",
+  "scripts": {
+    "start": "PORT=4545 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "esformatter": "^0.10.0",
+    "esformatter-jsx": "^7.4.1",
+    "esformatter-quotes": "^1.1.0",
+    "eslint": "^4.9.0"
+  }
+}

@@ -1,0 +1,5 @@
+{
+	"commands": [
+		"**/*.js : ./node_modules/.bin/esformatter -i {absPath}{filename}"
+	]
+}

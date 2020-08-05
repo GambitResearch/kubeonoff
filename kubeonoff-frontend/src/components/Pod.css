@@ -1,0 +1,76 @@
+.pod {
+	padding: .3rem;
+	border-radius: 4px;
+}
+
+.pod-header {
+	display: flex;
+	align-items: center;
+}
+
+.pod-header > *:not(:last-child) {
+	margin-right: .5rem;
+}
+
+.pod:hover {
+	background: white;
+}
+
+.pod-name {
+	flex: 1;
+}
+
+.pod:hover .action-button {
+	transition: all 0 ease-in-out;
+}
+
+.pod:hover .pod-button-delete {
+	background: crimson;
+	color: white;
+}
+
+.pod:hover .pod-button-logs {
+	background: #666;
+	color: white;
+}
+
+.pod-name {
+	font-family: monospace;
+	cursor: text;
+}
+
+.action-button {
+	user-select: none;
+}
+
+.pod-restarts {
+	font-family: monospace;
+	font-weight: bold;
+}
+
+[data-pod-ready='false'],
+[data-pod-status='NotReady'] {
+	border: 1px solid orange;
+	box-shadow: 0 0 3px orange;
+	background: white;
+	color: black;
+}
+
+[data-pod-status='CrashLoopBackOff'],
+[data-pod-status='Unknown'],
+[data-pod-status='Error'] {
+	border: 1px solid red;
+	box-shadow: 0 0 3px red;
+	background: white;
+	color: black;
+}
+
+.pod-containers-ready-breakdown {
+	margin-top: .5rem;
+	font-weight: bold;
+}
+
+.pod-containers-ready-breakdown-containers {
+	padding-left: .5rem;
+	font-weight: normal;
+}

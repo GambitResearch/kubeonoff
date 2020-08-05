@@ -1,0 +1,55 @@
+.control-item {
+	background: white;
+	border-radius: 5px;
+	border: 1px solid #dfdfdf;
+	margin: .3rem;
+	padding: .5rem;
+}
+
+.control-group {
+	padding: .5rem;
+	margin: .3rem;
+	background: white;
+	border-radius: 5px;
+	flex: 0 1 400px;
+	border: 1px solid #dfdfdf;
+}
+
+.control-group .control-item {
+	margin-bottom: 0;
+	margin-top: 0;
+	border-radius: 0;
+	border-width: 0 0 1px;
+}
+
+.control-group .control-item:last-child {
+	border-bottom-width: 0;
+	margin-bottom: .5rem;
+}
+
+.control-meta-error {
+	background: white;
+	color: crimson;
+	border: 1px solid;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding: .7rem;
+	border-radius: 3px;
+}
+
+.control-meta-title {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.control-text input {
+	background: #eee;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	outline: none;
+}
+
+.control-text input:focus {
+	box-shadow: 0 0 0 2px #aaa;
+}

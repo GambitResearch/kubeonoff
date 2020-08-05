@@ -1,0 +1,8 @@
+.scroller {
+	-webkit-overflow-scrolling: touch;
+	overflow: scroll;
+}
+
+.scroller-inner {
+	height: calc(100% + 1px);
+}

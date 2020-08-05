@@ -1,0 +1,18 @@
+.gauge.outer{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.gauge.column-wrapper{
+  height: 16px;
+  width: 10px;
+  background: #f4f4f4;
+  transform: rotate(180deg);
+  margin: 0 auto;
+}
+
+.gauge.column{
+  width: 10px;
+  height: 0%;
+  background: #90A4AE;
+}

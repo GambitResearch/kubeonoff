@@ -1,0 +1,18 @@
+.extension.extension {
+	flex: 0 1 960px;
+}
+
+.extension-name {
+	text-align: left;
+	padding: .6rem 1.5rem;
+	background: white;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.extension-body {
+	padding: .5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}

@@ -1,0 +1,26 @@
+[data-mode=parrot] .kubeonoff  {
+	background: url(http://cultofthepartyparrot.com/parrots/parrot.gif);
+	animation: slide 3s linear infinite;
+}
+
+@keyframes slide {
+	from {
+		background-position: 0 0;
+		background-size: 40px;
+	}
+
+	25% {
+		background-size: 80px;
+	}
+	50% {
+		background-size: 40px;
+	}
+	75% {
+		background-size: 80px;
+	}
+
+	to {
+		background-position: 100% 100%;
+		background-size: 40px;
+	}
+}

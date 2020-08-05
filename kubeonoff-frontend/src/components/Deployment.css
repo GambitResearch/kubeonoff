@@ -1,0 +1,193 @@
+.deployment,
+.daemonset,
+.extension {
+	background: white;
+	margin: .5rem;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	flex: 0 1 320px;
+	cursor: default;
+	overflow: hidden;
+	color: #333;
+	background: #eee;
+	background: rgba(255,255,255,0.5);
+	transition: flex-basis .5s ease-in-out;
+}
+
+.deployment-header,
+.daemonset-header {
+	padding: .5rem;
+	display: flex;
+	align-items: center;
+	background: white;
+	cursor: zoom-in;
+}
+
+.expanded {
+	flex-basis: 652px;
+}
+
+.expanded .deployment-header,
+.expanded .daemonset-header {
+	border-bottom: 1px solid #dfdfdf;
+	cursor: zoom-out;
+}
+
+.state-indicator {
+	flex: 0 0 auto;
+	width: 2rem;
+	height: 2rem;
+	background: #333;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 2rem;
+	color: white;
+	font-weight: bold;
+	font-family: monospace;
+}
+
+.state-indicator-off { background: crimson; color: transparent; }
+.state-indicator-pending { background: #FF851B; font-size: 0.9rem;}
+.state-indicator-on { background: #2ECC40 }
+
+.deployment-name,
+.daemonset-name {
+	font-size: 1.2rem;
+	margin: 0 1rem;
+	flex: 1 1 auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+[data-deployment-name*='kubeonoff'] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.action-button {
+	cursor: pointer;
+	border-radius: 3px;
+	padding: .3rem .5rem;
+	align-self: flex-end;
+	transition: all 0.1s ease-in-out;
+	box-shadow: 0 1px 3px rgba(0,0,0,0);
+	min-width: 55px;
+	text-align: center;
+}
+
+.deployment:hover > .deployment-header .action-button {
+	transition: all 0 ease-in-out;
+}
+
+.action-button:hover {
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.deployment-state-on:hover > .deployment-header .action-button {
+	background: crimson;
+	color: white;
+}
+
+.deployment-state-off:hover > .deployment-header .action-button {
+	background: #2ECC40;
+	color: white;
+}
+
+
+.deployment:hover > .deployment-header .action-button.restart {
+	background-color: #ffc107;
+	color: #3e2723;
+}
+
+.daemonset-body {
+	padding: .5rem;
+}
+
+.deployment-body-pods {
+	padding: .5rem;
+}
+
+.deployment-description {
+	padding: .5rem;
+	min-height: 3rem;
+	position: relative;
+	background: rgba(255,255,255,0.8);
+	margin-bottom: .5rem;
+	font-size: 1.2rem;
+}
+
+.deployment-description-markdown {
+	margin-left: 2.5rem;
+	margin-top: .5rem;
+}
+
+.deployment-description::before {
+	content: '“';
+	font-size: 4rem;
+	font-family: Georgia, serif;
+	opacity: 0.6;
+	display: block;
+	align-self: flex-start;
+	height: 2rem;
+	position: absolute;
+	top: -.35rem;
+}
+
+.deployment-description-markdown p {
+	margin: 1rem;
+}
+
+.deployment-description-markdown > * {
+	display: none;
+}
+
+.deployment-description-markdown > :nth-child(1) {
+	display: block;
+}
+
+.deployment-description-markdown.expanded > * {
+	display: block;
+}
+
+.deployment-description-markdown pre {
+	overflow: scroll;
+	margin: 1rem;
+	padding: .5em;
+	background-color: #f0f0f0;
+}
+
+.deployment-description-markdown p code {
+	background-color: #fcedea;
+	color: #c0341d;
+	padding: 2px 4px;
+	font-size: 95%;
+}
+
+.deployment-uptime {
+	border-radius: 5px;
+	padding: .2rem;
+	margin-right: .2rem;
+}
+
+.uptime-okay {
+	padding: 0;
+}
+
+.uptime-danger {
+	background: crimson;
+	color: white;
+}
+
+.uptime-warning {
+	background: orange;
+	color: white;
+}
+
+
+.more-less {
+	background-color: transparent;
+	color: #21bedf;
+	box-shadow: none;
+}
