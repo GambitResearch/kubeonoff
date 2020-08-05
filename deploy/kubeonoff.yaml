@@ -80,7 +80,7 @@ spec:
       volumes:
       containers:
       - name: kubeonoff
-        image: gjcarneiro/kubeonoff:v0.1
+        image: gjcarneiro/kubeonoff:v0.1.1
         imagePullPolicy: IfNotPresent
         resources:
           limits:
