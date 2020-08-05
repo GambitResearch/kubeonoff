@@ -18,14 +18,14 @@ before calling a developer.
 ## Quickstart
 
 Kubeonoff is a small web app that needs to be deployed to a specific k8s
-namespace.  It is totally namespace specific.  To manage muliple namespaces in
+namespace.  It is totally namespace specific.  To manage multiple namespaces in
 the same cluster, kubeonoff needs to be deployed for each namespace.
 
 The file `deploy/kubeonoff.yaml` contains a sample deployment manifest,
 including a kubeonoff Service, a Deployment, as well a service account and
 RBAC permissions:
 
-    kubectl -n you-namespace apply -f deploy/kubeonoff.yaml
+    kubectl -n your-namespace apply -f deploy/kubeonoff.yaml
 
 Now you can find out the service IP:
 
