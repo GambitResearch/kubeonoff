@@ -34,3 +34,5 @@ Now you can find out the service IP:
     kubeonoff    ClusterIP   10.107.160.49   <none>        80/TCP    78m
 
 Which means you should be able to open `http://10.107.160.49` in a browser.
+
+![Screenshot](Screenshot.png)
