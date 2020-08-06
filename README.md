@@ -3,7 +3,7 @@
 ## Intro
 
 Kubeonoff is a small web UI that allows to quickly stop/start/restart pods.
-It will also have visual cues that draws your attention is any pod or
+It will also have visual cues that draws your attention if any pod or
 deployment is behaving suspicously, such as:
 
   1. pods with restarting containers
