@@ -36,3 +36,23 @@ Now you can find out the service IP:
 Which means you should be able to open `http://10.107.160.49` in a browser.
 
 ![Screenshot](Screenshot.png)
+
+
+## Security
+
+Kubeonoff is meant to be exposed by some authenticating reverse proxy.  Do _not_ expose it to the Internet as it is!
+
+The reverse proxy will have a login function, and possibly set some HTTP header 
+indicating to the kubeonoff backend what is the username of the logged in user.  You can tell kubeonoff the name of the HTTP header that will contain the authenticated username by defining the `PROXY_AUTH_USER_HEADER` environment variable.  Kubeonoff will read this header containing the username, and the username will be used for logging.  Thus, if you inspect the kubeonoff logs (on container stdout), you will be able to get an audit log of who did what.
+
+While kubeonoff uses a ServiceAccount with permissions giving it considerable power, the web UI is restricted in what it can do, to keep the cluster secure.
+
+Here's what the web UI allows the user to do:
+
+1. Delete pods;
+2. Stop a deployment (set replicas to zero);
+3. Start a deployment again (set replicas back to the original value);
+4. Causing a rolling-restart of the pods of container (by modifying a label);
+5. View logs of containers;
+
+Even though kubeonoff backend needs a `patch` permission to Deployment resources, it only allows to stop/start/restart deployments.  It does _not_ allow to change any other field. Therefore kubeonoff does _NOT_ allow for code injection.  Therefore, a user with access to kubeonoff might be able to cause some downtime in your application by stopping pods, but it _cannot_ inject code into the cluster.
