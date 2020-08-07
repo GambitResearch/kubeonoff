@@ -55,4 +55,4 @@ Here's what the web UI allows the user to do:
 4. Causing a rolling-restart of the pods of container (by modifying a label);
 5. View logs of containers;
 
-Even though kubeonoff backend needs a `patch` permission to Deployment resources, it only allows to stop/start/restart deployments.  It does _not_ allow to change any other field. Therefore kubeonoff does _NOT_ allow for code injection.  Therefore, a user with access to kubeonoff might be able to cause some downtime in your application by stopping pods, but it _cannot_ inject code into the cluster.
+Even though kubeonoff backend needs a `patch` permission to Deployment resources, it only allows to stop/start/restart deployments.  It does _not_ allow to change any other field. Therefore kubeonoff does _NOT_ allow for code injection: a user with access to kubeonoff might be able to cause some downtime in your application by stopping pods, but it _cannot_ inject code into the cluster.
